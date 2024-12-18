@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+             }
+        .class{
+                width:100%;
+               height:600px;
+               background-color:slategrey;
+                }
+
+         #key{
+                border:2px solid #09ff00;
+                background-color: aqua;
+                height:100px;
+        
+                }
+        h2{
+                font-style:bold;
+                font-size:40px;
+                }
+        #key.click{
+                background-color: yellow;
+                }
+           
+            
+    </style>
+</head>
+<body>
+    <div id="class" >
+        <div>
+            <label for="input">Dark Mode:</label>
+            <input id="check" name="Dark Mode" type="checkbox"/>
+            <h2>change background-color</h2>
+        </div>
+        <div>
+            <label>Contained Dark Mode:</label>
+            <input id="uncheck"type="checkbox"/>
+            <div id="key">
+                <h2>this is a paragraph</h2>
+             </div>
+        </div>
+    </div>
+    <script>
+           
+      let d=JSON.parse(localStorage.getItem('data'))
+      let e=JSON.parse(localStorage.getItem('data1') )
+      let b=document.getElementById("key")
+      if(d){
+        document.body.classList.add("class");
+        check.checked=true;
+    }
+        if(e){
+        b.classList.add("click");
+        uncheck.checked=true;
+    }
+    let a= document.getElementById("check").addEventListener('change', function(e){
+    if(check.checked){
+      document.body.classList.add("class")
+      localStorage.setItem('data',true)
+    }else{
+       document.body.classList.remove("class")
+       localStorage.setItem('data',false)
+    }
+    
+    })
+    document.getElementById("uncheck").addEventListener('change',function(e){
+    // console.log(b.checked);
+    let b=document.getElementById("key")
+    if(uncheck.checked){
+     b.classList.add("click")
+     localStorage.setItem('data1',true)
+    }else{
+        b.classList.remove("click")
+        localStorage.setItem('data1',false)
+    }
+
+})
+    </script>
+</body>
+</html>
+      
+
+    
+    
+      
+
+
+      
+      
+
+   
+      
+     
+
+               
+             
+    
+
+         
+  
+    
+      
+
+   
